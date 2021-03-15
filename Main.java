@@ -72,11 +72,12 @@ class Main {
         // NIVELL 3
 
         int[] array = {1,2,3,4,5,6,7,8,9,10};
+        int j = array.length;
 
-        for(int i = 0; i < array.length / 2; i++) {
-            int buf = array[i];
-            array[i] = array[array.length - 1 - i];
-            array[array.length - 1 - i] = buf;
+        for(int i = 0; i < j; i++) {
+            int tmp = array[i];
+            array[i] = array[--j];
+            array[j] = tmp;
         }
 
         for(int i = 0; i < array.length; i++) {
@@ -84,4 +85,3 @@ class Main {
         }
     }
 }
-
